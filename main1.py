@@ -1,31 +1,10 @@
-numbers = [
-    9,
-    8,
-    32,
-    1,
-    10,
-    1,
-    10,
-    23,
-    1,
-    4,
-    10,
-    4,
-    2,
-    2,
-    2,
-    2,
-    1,
-    10,
-    1,
-    2,
-    2,
-    32,
-    23,
-    23,
-]
+s = "orange strawberry barley gooseberry apple apricot barley currant orange melon pomegranate banana banana orange barley apricot plum grapefruit banana quince strawberry barley grapefruit banana grapes melon strawberry apricot currant currant gooseberry raspberry apricot currant orange lime quince grapefruit barley banana melon pomegranate barley banana orange barley apricot plum banana quince lime grapefruit strawberry gooseberry apple barley apricot currant orange melon pomegranate banana banana orange apricot barley plum banana grapefruit banana quince currant orange melon pomegranate barley plum banana quince barley lime grapefruit pomegranate barley"
+
+s_ = s.split()
 
 result = {}
-for num in numbers:
-    result[num] = result.get(num, 0) + 1
-print(result)
+
+for i in range(len(s_)):
+    result[s_[i]] = result.get(s_[i], 0) + 1
+    m_res = max(result.values())
+print(result[m_res])
