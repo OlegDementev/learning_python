@@ -2,9 +2,15 @@ s = "orange strawberry barley gooseberry apple apricot barley currant orange mel
 
 s_ = s.split()
 
-result = {}
+res = {}
 
-for i in range(len(s_)):
-    result[s_[i]] = result.get(s_[i], 0) + 1
-    m_res = max(result.values())
-print(result[m_res])
+for i in s_:
+    res[i] = res.get(i, 0) + 1
+
+max_key = max(res.values())
+
+n_res = {i: j for i, j in res.items() if j == max_key}
+
+n_res__ = min(n_res)
+
+print(n_res__)
