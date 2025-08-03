@@ -34,13 +34,19 @@ file_zip = get_latest_file(
 
 
 # Функция для тестирования
-def same_parity(numbers):
+def get_biggest(numbers):
     if numbers == []:
-        return []
+        return -1
     else:
-        fl = numbers[0] % 2  # 1 or 0
-        numbers = list(filter(lambda x: x % 2 == fl, numbers))
-        return numbers
+        return int(
+            "".join(
+                sorted(
+                    map(str, numbers),
+                    key=lambda x: x * len(max(map(str, numbers), key=len)),
+                    reverse=True,
+                )
+            )
+        )
 
 
 # Создать функцию def _test(*args) для тестирования
